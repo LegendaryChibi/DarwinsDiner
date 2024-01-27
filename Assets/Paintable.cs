@@ -25,16 +25,18 @@ public class Paintable : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
+
             var Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(Ray, out hit))
+
+            if (Physics.Raycast(Ray, out hit) && hit.collider.gameObject.name != "Brush(Clone)")
             {
+                float currentPercent = percentage;
                 var go = Instantiate(brush, hit.point + Vector3.up * 0.1f, Quaternion.identity, transform);
                 go.transform.localScale = Vector3.one * brushSize;
-
-                // Update the texture with current brush stroke
                 UpdateTexture();
-                Debug.Log(percentage);
+                // Update the texture with current brush stroke
+                //Debug.Log(percentage);
             }
         }
     }
