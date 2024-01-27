@@ -10,14 +10,17 @@ public class Paintable : MonoBehaviour
     [SerializeField]
     RenderTexture RTexture;
     private Texture2D savedTexture;
+    [SerializeField]
     private float percentage;
     private int totalPixels;
+    private LayerMask mask;
 
     void Start()
     {
         // Initialize the saved texture
         savedTexture = new Texture2D(RTexture.width, RTexture.height);
         totalPixels = savedTexture.width * savedTexture.height;
+        mask = LayerMask.GetMask("Terrain", "IngredientPlane");
     }
 
     // Update is called once per frame
@@ -29,9 +32,9 @@ public class Paintable : MonoBehaviour
             var Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(Ray, out hit) && hit.collider.gameObject.name != "Brush(Clone)")
+            if (Physics.Raycast(Ray, out hit, 10000f, mask) && hit.collider.gameObject == this.gameObject)
             {
-                var go = Instantiate(brush, hit.point + Vector3.up * 0.1f, Quaternion.identity, transform);
+                var go = Instantiate(brush, hit.point + Vector3.up * 0.1f, Quaternion.identity, this.transform);
                 go.transform.localScale = Vector3.one * brushSize;
                 UpdateTexture();
                 // Update the texture with current brush stroke

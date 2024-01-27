@@ -37,7 +37,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _RealtimeMask:
-        m_Texture: {fileID: 8400000, guid: 09cfa3f8e9648f14f927f050cb84f415, type: 2}
+        m_Texture: {fileID: 8400000, guid: bc00409c415ea5d4a94ee75812d5d623, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
