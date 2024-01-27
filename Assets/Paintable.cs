@@ -11,7 +11,7 @@ public class Paintable : MonoBehaviour
     RenderTexture RTexture;
     private Texture2D savedTexture;
     private float percentage;
-    private float totalPixels;
+    private int totalPixels;
 
     void Start()
     {
@@ -31,12 +31,11 @@ public class Paintable : MonoBehaviour
 
             if (Physics.Raycast(Ray, out hit) && hit.collider.gameObject.name != "Brush(Clone)")
             {
-                float currentPercent = percentage;
                 var go = Instantiate(brush, hit.point + Vector3.up * 0.1f, Quaternion.identity, transform);
                 go.transform.localScale = Vector3.one * brushSize;
                 UpdateTexture();
                 // Update the texture with current brush stroke
-                //Debug.Log(percentage);
+                Debug.Log(percentage);
             }
         }
     }
@@ -59,7 +58,7 @@ public class Paintable : MonoBehaviour
                 }
             }
         }
-        percentage = coloredPixels / totalPixels * 100;
+        percentage = Mathf.RoundToInt(coloredPixels / totalPixels * 100);
     }
 
     public void Save()
