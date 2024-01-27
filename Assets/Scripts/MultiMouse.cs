@@ -19,6 +19,7 @@ public class MultiMouse : MonoBehaviour
     [SerializeField]
     private DogPawFollow dogPawFollow;
 
+
     public static DogPawFollow DogPawFollow { get { return instance.dogPawFollow; } }
 
     public Camera Camera { get { return camera; } }

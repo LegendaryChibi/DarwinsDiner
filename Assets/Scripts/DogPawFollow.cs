@@ -9,6 +9,10 @@ public class DogPawFollow : MonoBehaviour
     private Rigidbody leftArm;
     [SerializeField] 
     private Rigidbody rightArm;
+    [SerializeField]
+    private Transform leftEnd;
+    [SerializeField]
+    private Transform rightEnd;
 
     private LayerMask groundMask;
 
@@ -58,6 +62,7 @@ public class DogPawFollow : MonoBehaviour
             if (rightHasHit)
             {
                 rightArmRotation = Quaternion.LookRotation(rightHit.point - rightArm.transform.position);
+                
                 Ingredient.UpdateAllIngredients(rightHit.point, true);
             }
             else
