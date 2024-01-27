@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Materials/Button.mat.meta
 guid: eafa3ce81fda1974d8a5b097854a2d1e
+========
+guid: d8e4fe76ae184364bbd0cb1170ac4b86
+>>>>>>>> Stashed changes:Assets/Materials/Dog.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
