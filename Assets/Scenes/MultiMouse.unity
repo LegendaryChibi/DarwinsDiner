@@ -370,6 +370,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -4202798675411607032, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
@@ -398,14 +406,53 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.013055763
       objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -391268320553695201, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
       propertyPath: m_Name
       value: KitchenWorkspace
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242459941974961133, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721629163606514349, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859259852128964746, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146275318639410543, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821623529969584324, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152363913774390056, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 936580668}
   m_SourcePrefab: {fileID: 100100000, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
 --- !u!1 &330585543
 GameObject:
@@ -826,7 +873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &440552092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1479,6 +1526,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+--- !u!1 &936580666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 61be79b073fc1bb4e90dca4b18bd6aeb, type: 3}
+  m_PrefabInstance: {fileID: 329506062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &936580668
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936580666}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &981963254
 GameObject:
   m_ObjectHideFlags: 0
