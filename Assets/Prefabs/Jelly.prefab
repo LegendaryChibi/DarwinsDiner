@@ -156,7 +156,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 311
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 09cfa3f8e9648f14f927f050cb84f415, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: bc00409c415ea5d4a94ee75812d5d623, type: 2}
   m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
@@ -231,7 +231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d3c5313617077dd4e876e590ac082afa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -289,4 +289,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brush: {fileID: 1618573466626074726, guid: 742f687d4d6232a4ebfb7528dee125e4, type: 3}
   brushSize: 0.3
-  RTexture: {fileID: 8400000, guid: 09cfa3f8e9648f14f927f050cb84f415, type: 2}
+  RTexture: {fileID: 8400000, guid: bc00409c415ea5d4a94ee75812d5d623, type: 2}
+  percentage: 0

@@ -44,9 +44,9 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _DistortStrength: 0.0001
-    - _Metallic: 0
-    - _NoiseScale: 90
+    - _DistortStrength: 0.057
+    - _Metallic: 1
+    - _NoiseScale: 49
     - _NormalStrength: 0.207
     - _ReflectionStrength: 0.34
     - _Smoothness: 1
