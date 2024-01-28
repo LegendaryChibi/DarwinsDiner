@@ -47,7 +47,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -143,16 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 7010493421249598114}
   clipList:
-  - {fileID: 8300000, guid: a1bae305fb2dd4d4ca47b558a601a68f, type: 3}
-  - {fileID: 8300000, guid: 40209e8510dec224a9fa05740a1e372a, type: 3}
-  - {fileID: 8300000, guid: 9c61f45616c524a48b080d092eb128be, type: 3}
-  - {fileID: 8300000, guid: 7bbeeb621a69d4149a6cb4d37d51523d, type: 3}
-  - {fileID: 8300000, guid: 670db66be6bc2b24ba88cbabf4f1c2b3, type: 3}
-  - {fileID: 8300000, guid: a51823e8cda1ce849a196a4d11cd1946, type: 3}
-  - {fileID: 8300000, guid: 1671cebd232b1794d856cf1d03ea4848, type: 3}
-  - {fileID: 8300000, guid: c618732e53d0fce44be1013143aa05a8, type: 3}
-  - {fileID: 8300000, guid: ee1ec4115498f0540a1768b6a0c008cc, type: 3}
-  - {fileID: 8300000, guid: 1646c5172321d6b4e9d0908ea2304ee7, type: 3}
-  - {fileID: 8300000, guid: 244c5f4c4d794a74c9bdb4f56acddaac, type: 3}
-  - {fileID: 8300000, guid: 3e84ed626aa35fe479fedb1acff1a17d, type: 3}
-  SecondsPerDoot: 1
+  - {fileID: 8300000, guid: f5e1608052ec1464ab8e844f125beeda, type: 3}
+  - {fileID: 8300000, guid: 04ed72635a7c45f4f8c610b46cb7d451, type: 3}
+  - {fileID: 8300000, guid: 31782c7edb8971f49bcf6c98ea21fc41, type: 3}
+  SecondsPerDoot: 0.1

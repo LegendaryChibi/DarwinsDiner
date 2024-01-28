@@ -131,6 +131,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 806034769499591235, guid: 7f0fcfbbcc63467439ee875503d71acc, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.287
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548367925519804726, guid: 7f0fcfbbcc63467439ee875503d71acc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548367925519804726, guid: 7f0fcfbbcc63467439ee875503d71acc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548367925519804726, guid: 7f0fcfbbcc63467439ee875503d71acc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6877770648161978262, guid: 7f0fcfbbcc63467439ee875503d71acc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -210,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 6877770648161978262, guid: 7f0fcfbbcc63467439ee875503d71acc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666179189008795988, guid: 7f0fcfbbcc63467439ee875503d71acc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8784919651042629718, guid: 7f0fcfbbcc63467439ee875503d71acc, type: 3}
       propertyPath: m_Name

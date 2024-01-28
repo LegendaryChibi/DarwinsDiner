@@ -263,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1802783937530293, guid: 9c8a55226ece0644eacbf0cede475133, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 345341532478028372, guid: 9c8a55226ece0644eacbf0cede475133, type: 3}
       propertyPath: SecondsPerDoot

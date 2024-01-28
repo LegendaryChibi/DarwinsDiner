@@ -12,9 +12,10 @@ public class AudioShifter : MonoBehaviour
     private float SecondsPerDoot;
     private float waitTime = 0;
 
+    /*
     private void Update()
     {
-        float notesToPlay = 0;
+        //float notesToPlay = 0;
         waitTime += Time.deltaTime;
 
         if(waitTime > SecondsPerDoot)
@@ -22,9 +23,16 @@ public class AudioShifter : MonoBehaviour
             waitTime = 0;
             int rand = Random.Range(0, clipList.Count);
             source.clip = clipList[rand];
-            //source.pitch = Random.Range(0.0f, 2.0f);
+            //source.pitch = Random.Range(2.0f, 3.0f);
 
             source.Play();
         }
+    }
+    */
+
+    private void OnEnable()
+    {
+        source.clip = clipList[Random.Range(0, clipList.Count)];
+        source.Play();
     }
 }
