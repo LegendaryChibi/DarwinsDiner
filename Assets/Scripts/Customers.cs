@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -9,7 +10,16 @@ public class Customers : MonoBehaviour
     private Vector3 target;
     private bool isMoving = false;
     private int customersServed = 0;
+    [SerializeField]
+    private Animator[] animators;
 
+    private void Start()
+    {
+        if (customersServed == 0)
+        {
+            StartCoroutine(Talking());
+        }
+    }
 
     void FixedUpdate()
     {
@@ -42,6 +52,19 @@ public class Customers : MonoBehaviour
         {
             isMoving = false;
             MultiMouse.instance.nextup = false;
+            StartCoroutine(Talking());
         }
+    }
+
+    IEnumerator Talking()
+    {
+        if (customersServed > 0)
+        {
+            animators[customersServed - 1].SetBool("Talking", false);
+        }
+
+        animators[customersServed].SetBool("Talking", true);
+        yield return new WaitForSeconds(3);
+        animators[customersServed].SetBool("Talking", false);
     }
 }

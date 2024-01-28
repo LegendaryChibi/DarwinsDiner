@@ -19,7 +19,7 @@ public class OrderUp : MonoBehaviour
                 peanutBread.DestroyChildObjectsWithName("Brush(Clone)");
                 jellyBread.DestroyChildObjectsWithName("Brush(Clone)");
             }
-            Debug.Log(MultiMouse.instance.score);
+            //Debug.Log(MultiMouse.instance.score);
         }
     }
 }
