@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private VideoPlayer vp;
     [SerializeField] private GameObject mainUI;
     [SerializeField] private AudioSource music;
+    [SerializeField] private AudioClip clickSFX;
 
     private void OnEnable()
     {
@@ -31,6 +32,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        music.PlayOneShot(clickSFX, 1);
         cutscene.SetActive(true);
         mainUI.SetActive(false);
         vp.loopPointReached += CheckOver;
@@ -39,11 +41,13 @@ public class MainMenu : MonoBehaviour
 
     public void PlayCredits()
     {
+        music.PlayOneShot(clickSFX, 1);
         credits.SetActive(!credits.active);
     }
 
     public void QuitGame()
     {
+        music.PlayOneShot(clickSFX, 1);
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
