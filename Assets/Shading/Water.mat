@@ -56,5 +56,5 @@ Material:
     - _WaveSpread: 20
     m_Colors:
     - _FlowDirection: {r: 0.5, g: -0.2, b: 0, a: 0}
-    - _GlassColor: {r: 0.26352793, g: 0.8867924, b: 0.67282385, a: 0}
+    - _GlassColor: {r: 0.52705586, g: 1.7735848, b: 1.3456477, a: 0}
   m_BuildTextureStacks: []
