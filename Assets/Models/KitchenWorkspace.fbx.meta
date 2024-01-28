@@ -3,37 +3,7 @@ guid: 61be79b073fc1bb4e90dca4b18bd6aeb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cutting Board
-    second: {fileID: 2100000, guid: 1270aaa5bd4c6874195a0834799c6f8e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 6c83499dba2f2f649868aa841a69e014, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalCounter
-    second: {fileID: 2100000, guid: 79d8be8b3f5a0f04482f4ad0988d0cc7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalCounter.001
-    second: {fileID: 2100000, guid: 3ff596721e907e74d9160e23e88ca3b3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalGromets
-    second: {fileID: 2100000, guid: 8ebb2dff625a9294599a4c68824d52a1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalSupports
-    second: {fileID: 2100000, guid: 2d8731448b5cb6b4c80da84bd6300b9e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -67,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
