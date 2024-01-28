@@ -23,7 +23,8 @@ public class Customers : MonoBehaviour
         }
         else if (customersServed == transform.childCount)
         {
-            Debug.Log("Game Complete! Final Score: " + Mathf.RoundToInt(MultiMouse.instance.score / transform.childCount * 200));
+            int totalscore = Mathf.RoundToInt(MultiMouse.instance.score / ((float)transform.childCount * 200) * 100);
+            Debug.Log("Game Complete! Final Score: " + totalscore + "%");
         }
 
         if (isMoving)
