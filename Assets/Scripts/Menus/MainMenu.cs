@@ -2,22 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField]
-    private Texture2D paw;
-    private CursorMode cursorMode = CursorMode.Auto;
-    private Vector2 hotSpot = Vector2.zero;
 
-    //Set mouse as the dogpaw
-    private void OnMouseEnter()
+    public void PlayGame()
     {
-        Cursor.SetCursor(paw, hotSpot, cursorMode);
+        SceneManager.LoadScene("MultiMouse");
     }
 
-    private void OnMouseExit()
+    public void PlayCredits()
     {
-        Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        SceneManager.LoadScene("Character");
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
