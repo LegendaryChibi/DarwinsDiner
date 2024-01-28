@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: -6465566751694194690, guid: 3cb8786e33de0ac46855e97651b34403, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 907c4e90ca051674dad427f7ddd2d427, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -44,12 +44,17 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _DistortStrength: 0.057
+    - _DistortStrength: 0.0001
+    - _FlowSpeed: 0.1
     - _Metallic: 1
-    - _NoiseScale: 49
-    - _NormalStrength: 0.207
-    - _ReflectionStrength: 0.34
+    - _NoiseScale: 1
+    - _NormalStrength: 0.0001
+    - _Normal_Strengtjh: 2.5
+    - _ReflectionStrength: 1
     - _Smoothness: 1
+    - _WaveHeight: 2
+    - _WaveSpread: 20
     m_Colors:
-    - _GlassColor: {r: 0.42453918, g: 0.52555674, b: 1.3433181, a: 0.08627451}
+    - _FlowDirection: {r: 0.5, g: -0.2, b: 0, a: 0}
+    - _GlassColor: {r: 0.26352793, g: 0.8867924, b: 0.67282385, a: 0}
   m_BuildTextureStacks: []
