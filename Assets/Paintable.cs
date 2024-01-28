@@ -31,7 +31,7 @@ public class Paintable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && spread == "Jelly")
+        if (Input.GetMouseButton(0) && MultiMouse.DogPawFollow.LeftPaw.JamPercent == 100 && spread == "Jelly")
         {
 
             var Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -47,7 +47,7 @@ public class Paintable : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(1) && spread == "Peanutbutter")
+        if (Input.GetMouseButton(1) && MultiMouse.DogPawFollow.RightPaw.PeanutPercent == 100 && spread == "Peanutbutter")
         {
 
             var Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
