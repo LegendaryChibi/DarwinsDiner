@@ -8,7 +8,7 @@ public class Jam : Ingredient
     {
         if (isRight)
         {
-            MultiMouse.DogPawFollow.RightPaw.JamPercent = 100;
+            /*MultiMouse.DogPawFollow.RightPaw.JamPercent = 100;*/
         }
         else
         {

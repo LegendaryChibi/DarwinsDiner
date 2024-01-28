@@ -9,10 +9,10 @@ public class PeanutButter : Ingredient
         if(isRight)
         {
             MultiMouse.DogPawFollow.RightPaw.PeanutPercent = 100;
-        } else
+        } /*else
         {
             MultiMouse.DogPawFollow.LeftPaw.PeanutPercent = 100;
-        }
+        }*/
         
     }
 }
