@@ -10,9 +10,9 @@ public class DogPawFollow : MonoBehaviour
     [SerializeField] 
     private Rigidbody rightArm;
     [SerializeField]
-    private Transform leftEnd;
+    private DogPaw leftPaw;
     [SerializeField]
-    private Transform rightEnd;
+    private DogPaw rightPaw;
 
     private LayerMask groundMask;
 
@@ -25,6 +25,8 @@ public class DogPawFollow : MonoBehaviour
 
     public RaycastHit LeftPawRayhit { get { return leftHit; } }
     public RaycastHit RightPawRayhit { get { return rightHit; } }
+    public DogPaw LeftPaw { get {  return leftPaw; } }
+    public DogPaw RightPaw { get { return rightPaw; } }
     private void Start()
     {
         camera = MultiMouse.instance.Camera;

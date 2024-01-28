@@ -1,9 +1,14 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.Rendering;
-
+/*public enum Spread
+{
+    Peanutbutter,
+    Jelly
+}*/
 public class Paintable : MonoBehaviour
 {
+    public string spread;
     public GameObject brush;
     [SerializeField]
     private float brushSize;
@@ -11,7 +16,7 @@ public class Paintable : MonoBehaviour
     RenderTexture RTexture;
     private Texture2D savedTexture;
     [SerializeField]
-    private float percentage;
+    private int percentage;
     private int totalPixels;
     private LayerMask mask;
 
@@ -26,7 +31,7 @@ public class Paintable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && spread == "Jelly")
         {
 
             var Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -38,7 +43,23 @@ public class Paintable : MonoBehaviour
                 go.transform.localScale = Vector3.one * brushSize;
                 UpdateTexture();
                 // Update the texture with current brush stroke
-                Debug.Log(percentage);
+                MultiMouse.instance.JellyPercent(percentage);
+            }
+        }
+
+        if (Input.GetMouseButton(1) && spread == "Peanutbutter")
+        {
+
+            var Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(Ray, out hit, 10000f, mask) && hit.collider.gameObject == this.gameObject)
+            {
+                var go = Instantiate(brush, hit.point + Vector3.up * 0.1f, Quaternion.identity, this.transform);
+                go.transform.localScale = Vector3.one * brushSize;
+                UpdateTexture();
+                // Update the texture with current brush stroke
+                MultiMouse.instance.PeanutButterPercent(percentage);
             }
         }
     }

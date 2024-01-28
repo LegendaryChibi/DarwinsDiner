@@ -18,7 +18,8 @@ public class MultiMouse : MonoBehaviour
     private Camera camera;
     [SerializeField]
     private DogPawFollow dogPawFollow;
-
+    public int peanutButterPercent = 0;
+    public int jellyPercent = 0;
 
     public static DogPawFollow DogPawFollow { get { return instance.dogPawFollow; } }
 
@@ -33,12 +34,6 @@ public class MultiMouse : MonoBehaviour
     void Awake()
     {
         instance = this;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
  
@@ -65,5 +60,13 @@ public class MultiMouse : MonoBehaviour
         
     }
 
+    public void PeanutButterPercent(int x) 
+    {
+        peanutButterPercent = x;
+    }
 
+    public void JellyPercent(int x)
+    {
+        jellyPercent = x;
+    }
 }

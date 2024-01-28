@@ -6,6 +6,14 @@ public class Jam : Ingredient
 {
     public override void OnClick(bool isRight)
     {
-        Debug.Log("JAM!");
+        if (isRight)
+        {
+            /*MultiMouse.DogPawFollow.RightPaw.JamPercent = 100;*/
+        }
+        else
+        {
+            MultiMouse.DogPawFollow.LeftPaw.JamPercent = 100;
+        }
+
     }
 }
