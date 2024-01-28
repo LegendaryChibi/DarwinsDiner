@@ -63,7 +63,7 @@ public class Customers : MonoBehaviour
             animators[customersServed - 1].SetBool("Talking", false);
         }
 
-        if (customersServed < transform.childCount - 1)
+        if (customersServed < transform.childCount)
         {
             animators[customersServed].SetBool("Talking", true);
             yield return new WaitForSeconds(3);
