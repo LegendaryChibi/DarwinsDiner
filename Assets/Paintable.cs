@@ -91,4 +91,20 @@ public class Paintable : MonoBehaviour
         File.WriteAllBytes(Application.dataPath + "/savedImage.png", data);
         Debug.Log("Saved Image to: " + Application.dataPath + "/savedImage.png");
     }
+
+
+    public void DestroyChildObjectsWithName(string name)
+    {
+        // Loop through all child objects
+        for (int i = transform.childCount - 1; i >= 0; i--)
+        {
+            Transform child = transform.GetChild(i);
+            if (child.name == name)
+            {
+                // Destroy the child game object
+                Destroy(child.gameObject);
+            }
+        }
+        percentage = 0;
+    }
 }

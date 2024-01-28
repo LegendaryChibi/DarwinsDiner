@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Customers : MonoBehaviour
@@ -9,17 +10,20 @@ public class Customers : MonoBehaviour
     private bool isMoving = false;
     private int customersServed = 0;
 
-    void Update()
+
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && customersServed < transform.childCount)
+        if (MultiMouse.instance.orderup && !MultiMouse.instance.nextup && customersServed < transform.childCount)
         {
+            MultiMouse.instance.orderup = false;
+            MultiMouse.instance.nextup = true;
             customersServed++;
             isMoving = true;
-            target = new Vector3(transform.position.x, transform.position.y, transform.position.z + 5);
+            target = new Vector3(transform.position.x - 20, transform.position.y, transform.position.z);
         }
         else if (customersServed == transform.childCount)
         {
-            Debug.Log("Game Complete!");
+            Debug.Log("Game Complete! Final Score: " + Mathf.RoundToInt(MultiMouse.instance.score / transform.childCount * 200));
         }
 
         if (isMoving)
@@ -36,6 +40,7 @@ public class Customers : MonoBehaviour
         if (Vector3.Distance(transform.position, target) < 0.001f)
         {
             isMoving = false;
+            MultiMouse.instance.nextup = false;
         }
     }
 }

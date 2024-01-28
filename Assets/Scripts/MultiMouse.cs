@@ -20,6 +20,9 @@ public class MultiMouse : MonoBehaviour
     private DogPawFollow dogPawFollow;
     public int peanutButterPercent = 0;
     public int jellyPercent = 0;
+    public bool orderup = false;
+    public bool nextup = false;
+    public int score = 0;
 
     public static DogPawFollow DogPawFollow { get { return instance.dogPawFollow; } }
 
@@ -68,5 +71,12 @@ public class MultiMouse : MonoBehaviour
     public void JellyPercent(int x)
     {
         jellyPercent = x;
+    }
+
+    public void SaveCustomerStat()
+    {
+        score += peanutButterPercent + jellyPercent;
+        peanutButterPercent = 0;
+        jellyPercent = 0;
     }
 }
