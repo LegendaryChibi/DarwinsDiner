@@ -6,6 +6,13 @@ public class PeanutButter : Ingredient
 {
     public override void OnClick(bool isRight)
     {
-        Debug.Log("PEANUT BUTTER!");
+        if(isRight)
+        {
+            MultiMouse.DogPawFollow.RightPaw.PeanutPercent = 100;
+        } else
+        {
+            MultiMouse.DogPawFollow.LeftPaw.PeanutPercent = 100;
+        }
+        
     }
 }

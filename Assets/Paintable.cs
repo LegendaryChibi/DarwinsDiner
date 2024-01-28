@@ -4,6 +4,12 @@ using UnityEngine.Rendering;
 
 public class Paintable : MonoBehaviour
 {
+    private enum spreads {
+        None,
+        Jam,
+        PeanutButter
+    }
+    private spreads currentSpread;
     public GameObject brush;
     [SerializeField]
     private float brushSize;
@@ -26,7 +32,7 @@ public class Paintable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (MultiMouse.IsLMBPress || MultiMouse.IsRMBPress)
         {
 
             var Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -34,6 +40,10 @@ public class Paintable : MonoBehaviour
 
             if (Physics.Raycast(Ray, out hit, 10000f, mask) && hit.collider.gameObject == this.gameObject)
             {
+                if (currentSpread == spreads.None)
+                {
+                   
+                }
                 var go = Instantiate(brush, hit.point + Vector3.up * 0.1f, Quaternion.identity, this.transform);
                 go.transform.localScale = Vector3.one * brushSize;
                 UpdateTexture();
@@ -48,7 +58,7 @@ public class Paintable : MonoBehaviour
         float coloredPixels = 0;
         RenderTexture.active = RTexture;
         savedTexture.ReadPixels(new Rect(0, 0, RTexture.width, RTexture.height), 0, 0);
-        savedTexture.Apply();
+        //savedTexture.Apply(); Why are we sending data back to the GPU?
 
         for (int y = 0; y < savedTexture.height; y++)
         {
@@ -62,6 +72,11 @@ public class Paintable : MonoBehaviour
             }
         }
         percentage = Mathf.RoundToInt(coloredPixels / totalPixels * 100);
+    }
+
+    public void OnDisable()
+    {
+        Save();
     }
 
     public void Save()
