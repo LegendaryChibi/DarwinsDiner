@@ -12,6 +12,8 @@ public class Customers : MonoBehaviour
     private int customersServed = 0;
     [SerializeField]
     private Animator[] animators;
+    [SerializeField]
+    private GameObject gameDone;
 
     private void Start()
     {
@@ -34,7 +36,8 @@ public class Customers : MonoBehaviour
         else if (customersServed == transform.childCount)
         {
             int totalscore = Mathf.RoundToInt(MultiMouse.instance.score / ((float)transform.childCount * 200) * 100);
-            Debug.Log("Game Complete! Final Score: " + totalscore + "%");
+            //Debug.Log("Game Complete! Final Score: " + totalscore + "%");
+            gameDone.SetActive(true);
         }
 
         if (isMoving)
@@ -63,7 +66,7 @@ public class Customers : MonoBehaviour
             animators[customersServed - 1].SetBool("Talking", false);
         }
 
-        if (customersServed < transform.childCount)
+        if (customersServed < transform.childCount - 1)
         {
             animators[customersServed].SetBool("Talking", true);
             yield return new WaitForSeconds(3);

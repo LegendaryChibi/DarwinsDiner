@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Jam : Ingredient
 {
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clickSFX;
+    private bool playing = false;
+
     public override void OnClick(bool isRight)
     {
         if (isRight)
@@ -13,7 +17,16 @@ public class Jam : Ingredient
         else
         {
             MultiMouse.DogPawFollow.LeftPaw.JamPercent = 100;
+            if (!playing) { StartCoroutine(playSFX()); }
         }
 
+    }
+
+    private IEnumerator playSFX()
+    {
+        playing = true;
+        source.PlayOneShot(clickSFX);
+        yield return new WaitForSeconds(1f);
+        playing = false;
     }
 }

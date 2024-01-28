@@ -1,3 +1,4 @@
+using System.Collections;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -19,6 +20,9 @@ public class Paintable : MonoBehaviour
     private int percentage;
     private int totalPixels;
     private LayerMask mask;
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clickSFX;
+    private bool playing = false;
 
     void Start()
     {
@@ -40,6 +44,7 @@ public class Paintable : MonoBehaviour
             if (Physics.Raycast(Ray, out hit, 10000f, mask) && hit.collider.gameObject == this.gameObject)
             {
                 var go = Instantiate(brush, hit.point + Vector3.up * 0.1f, Quaternion.identity, this.transform);
+                if (!playing) { StartCoroutine(playSFX()); }
                 go.transform.localScale = Vector3.one * brushSize;
                 UpdateTexture();
                 // Update the texture with current brush stroke
@@ -56,6 +61,7 @@ public class Paintable : MonoBehaviour
             if (Physics.Raycast(Ray, out hit, 10000f, mask) && hit.collider.gameObject == this.gameObject)
             {
                 var go = Instantiate(brush, hit.point + Vector3.up * 0.1f, Quaternion.identity, this.transform);
+                if (!playing) { StartCoroutine(playSFX()); }
                 go.transform.localScale = Vector3.one * brushSize;
                 UpdateTexture();
                 // Update the texture with current brush stroke
@@ -106,5 +112,13 @@ public class Paintable : MonoBehaviour
             }
         }
         percentage = 0;
+    }
+
+    private IEnumerator playSFX()
+    {
+        playing = true;
+        source.PlayOneShot(clickSFX);
+        yield return new WaitForSeconds(0.2f);
+        playing = false;
     }
 }

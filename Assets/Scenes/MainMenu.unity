@@ -11000,7 +11000,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067490039}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 347ce5eb155aaf24f8f0a9b877cdb0c1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: b4b5a2c6c1c0f7f48a05709c594724e8, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 13037049}
@@ -16318,7 +16318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f386aad2589c5e0459a8708482854a8a, type: 3}
+  m_Texture: {fileID: 2800000, guid: c0f3474a639df6f4180951a1dbfbc598, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

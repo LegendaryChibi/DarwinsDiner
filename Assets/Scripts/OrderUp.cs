@@ -10,12 +10,16 @@ public class OrderUp : MonoBehaviour
     Paintable peanutBread;
     [SerializeField]
     Paintable jellyBread;
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clickSFX;
+    private bool playing = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 7 && !MultiMouse.instance.nextup)
         {
             StartCoroutine(Fling());
+            if (!playing) { StartCoroutine(playSFX()); }
 
             if (peanutBread != null && jellyBread != null)
             {
@@ -39,5 +43,13 @@ public class OrderUp : MonoBehaviour
         MultiMouse.instance.orderup = true;
         yield return new WaitForSeconds(0.5f);
         MultiMouse.instance.orderup = false;
+    }
+
+    private IEnumerator playSFX()
+    {
+        playing = true;
+        source.PlayOneShot(clickSFX);
+        yield return new WaitForSeconds(1);
+        playing = false;
     }
 }
