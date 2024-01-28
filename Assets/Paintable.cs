@@ -69,7 +69,7 @@ public class Paintable : MonoBehaviour
         float coloredPixels = 0;
         RenderTexture.active = RTexture;
         savedTexture.ReadPixels(new Rect(0, 0, RTexture.width, RTexture.height), 0, 0);
-        savedTexture.Apply();
+        //savedTexture.Apply(); We don't need to send data back to the GPU
 
         for (int y = 0; y < savedTexture.height; y++)
         {
