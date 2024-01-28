@@ -58,13 +58,20 @@ public class Customers : MonoBehaviour
 
     IEnumerator Talking()
     {
-        if (customersServed > 0)
+        if (customersServed > 0 && customersServed < transform.childCount)
         {
             animators[customersServed - 1].SetBool("Talking", false);
         }
 
-        animators[customersServed].SetBool("Talking", true);
-        yield return new WaitForSeconds(3);
-        animators[customersServed].SetBool("Talking", false);
+        if (customersServed < transform.childCount - 1)
+        {
+            animators[customersServed].SetBool("Talking", true);
+            yield return new WaitForSeconds(3);
+            animators[customersServed].SetBool("Talking", false);
+        }
+        else
+        {
+            yield return null;
+        }
     }
 }
