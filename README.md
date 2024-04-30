@@ -14,10 +14,12 @@ Darwin's uses systems which include:
 - Render Textures
 - Custom Camera Material Conversion
 
-> Screenshot
+> Main Menu
 ![image](https://i.imgur.com/HeGwc5h.png)
-![image](https://i.imgur.com/HeGwc5h.png](https://i.imgur.com/0HMGeGN.png))
-![image](https://i.imgur.com/HeGwc5h.png](https://i.imgur.com/0M8dQVL.png))
+> Promotional Image
+![image](https://i.imgur.com/0HMGeGN.png)
+> Gameplay
+![image](https://i.imgur.com/0M8dQVL.png)
 
 
 ## Purpose
