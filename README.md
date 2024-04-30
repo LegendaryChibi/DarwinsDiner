@@ -14,12 +14,7 @@ Darwin's uses systems which include:
 - Render Textures
 - Custom Camera Material Conversion
 
-
-> Menu
-![image](https://i.imgur.com/HeGwc5h.png)
-> Promotional Image
-![image]([https://i.imgur.com/HeGwc5h.png](https://i.imgur.com/0HMGeGN.png))
-> Gameplay
+> Screenshot
 ![image]([https://i.imgur.com/HeGwc5h.png](https://i.imgur.com/0M8dQVL.png))
 
 
